@@ -16,12 +16,10 @@ class PostForm(forms.ModelForm):
         required=False,
     )
     model = Post
-    fields = ('title', 'text', 'title_eng', 'text_eng', 'author', 'published_date', 'is_published', 'images', 'videos')
+    fields = ('title', 'text', 'author', 'published_date', 'is_published', 'images', 'videos')
     labels = {
         "title": "Заголовок",
         "text": "Текст",
-        "title_eng": "Заголовок на английском",
-        "text_eng": "Текст на английском",
         "author": "Автор",
         "published_date": "Дата публикации",
         "is_published": "Опубликовано",
@@ -31,12 +29,9 @@ class PostForm(forms.ModelForm):
     widgets = {
         'title': forms.TextInput(attrs={'class': 'form-control'}),
         'text': forms.Textarea(attrs={'class': 'form-control'}),
-        'title_eng': forms.TextInput(attrs={'class': 'form-control'}),
-        'text_eng': forms.Textarea(attrs={'class': 'form-control'}),
         'author': forms.Select(attrs={'class': 'form-control'}),
         'published_date': forms.DateInput(attrs={'class': 'form-control'}),
         'is_published': forms.CheckboxInput(attrs={'class': 'form-control'}),
         'images': forms.FileInput(attrs={'class': 'form-control'}),
         'videos': forms.FileInput(attrs={'class': 'form-control'}),
     }
-

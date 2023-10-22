@@ -7,8 +7,8 @@ User = get_user_model()
 class Post(models.Model):
     title = models.CharField(max_length=100, verbose_name='Заголовок')
     text = models.TextField(verbose_name='Текст')
-    title_eng = models.CharField(max_length=100, verbose_name='Заголовок на английском')
-    text_eng = models.TextField(verbose_name='Текст на английском')
+    # title_eng = models.CharField(max_length=100, verbose_name='Заголовок на английском')
+    # text_eng = models.TextField(verbose_name='Текст на английском')
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="posts", default="", verbose_name='Автор')
     # photo = models.ImageField(upload_to='post_images/', blank=True, null=True, verbose_name='Фото')

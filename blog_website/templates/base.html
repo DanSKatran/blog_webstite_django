@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Капустинский центр современного искусства</title>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+
+</head>
+<body>
+    {% include "includes/header.html" %}
+    <div class="container pt-5">
+        {% block content %}{% endblock %}
+    </div>
+    {% include "includes/footer.html" %}
+<script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
+</body>
+</html>

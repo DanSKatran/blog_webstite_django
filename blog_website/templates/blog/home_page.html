@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% load static %}
+
+
+{% block content %}
+
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="container p-3 bg-purple text-center">
+                    <h1 class="text-white">Добро пожаловать в</h1>
+                    <h2 class="text-white">Капустинский центр современного искусства</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="text-muted">Мы - группа людей, которые разделяют общую страсть к творчеству и самовыражению.</p>
+                <p class="text-muted">Мы верим в идею совместной и органичной деятельности. Создание среды, где каждый имеет голос и взаимодействие основано на равноправии, это то, что нас объединяет.</p>
+                <p class="text-muted">Наше сообщество ценит независимость и непринужденное взаимодействие. Мы уделяем внимание разнообразию и диалогу, исключая иерархию и принуждение.</p>
+                <p class="text-muted">Центр современного искусства, в котором мы находимся, не ограничивается формальными структурами. Мы поддерживаем искусство и, возможно, иногда используем юмор и сатиру, чтобы выразить наши взгляды на систему искусства.</p>
+                <p class="text-muted">Мы стремимся к влиянию и к тому, чтобы наше сообщество стало значимой силой в мире искусства.</p>
+                <p class="text-muted">Если вас привлекает идея творчества и хотите поделиться своим видением, не стесняйтесь связаться с нами. Ваше участие может оказаться ценным.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Background styles for the purple container */
+    .bg-purple {
+        background-color: #871F78; /* Use your preferred shade of purple */
+        border-radius: 10px;
+    }
+
+    /* Text styles for the headers */
+    .text-white {
+        color: #fff; /* White text color */
+    }
+
+    /* Spacing for the main content */
+    .container {
+        padding: 20px; /* Add some padding to the container */
+    }
+
+    /* Additional styles for the text */
+    .text-muted {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+</style>
+{% endblock %}
+

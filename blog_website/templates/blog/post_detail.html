@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1>{{ object.title }}</h1>
+    </div>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">{{ object.text }}</p>
+                <p class="card-text"><small class="text-muted">Published on {{ object.published_date }}</small></p>
+
+                {% if object.videos.all %}
+                    {% for video_instance in object.videos.all %}
+                        <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">
+                            <source src="{{ video_instance.video.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    {% endfor %}
+                {% endif %}
+
+
+                {% if object.images.all %}
+    <div class="image-container mt-4"> <!-- Add 'mt-4' class for margin-top -->
+        <div class="row">
+            {% for image in object.images.all %}
+                <div class="col-md-4 mb-4">
+                    <img src="{{ image.image.url }}" alt="Post Image" class="img-fluid" />
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+                const player = new Plyr('video');
+            });
+    </script>
+{% endblock %}

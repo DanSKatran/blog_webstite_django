@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block content %}
-    <div class="container mt-4">
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+
+
+<div class="container mt-4">
         <h1>{{ object.title }}</h1>
     </div>
     <div class="container mt-4">
@@ -11,39 +15,61 @@
                 <p class="card-text">{{ object.text }}</p>
                 <p class="card-text"><small class="text-muted">Published on {{ object.published_date }}</small></p>
 
-                <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
-                <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
 
-                {% if object.videos.all %}
-                    {% for video_instance in object.videos.all %}
-                        <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">
-                            <source src="{{ video_instance.video.url }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    {% endfor %}
-                {% endif %}
+<!--                {% if object.videos.all %}-->
+<!--    <div class="video-container mt-4">-->
+<!--        {% for video_instance in object.videos.all %}-->
+<!--&lt;!&ndash;            <div class="mb-3 embed-responsive embed-responsive-16by9 video-placeholder plyr">&ndash;&gt;-->
+<!--&lt;!&ndash;                <video class="embed-responsive-item" controls preload="none" poster="{{ video_instance.poster_url }}" data-src="{{ video_instance.video.url }}">&ndash;&gt;-->
+<!--&lt;!&ndash;                    Your browser does not support the video tag.&ndash;&gt;-->
+<!--&lt;!&ndash;                </video>&ndash;&gt;-->
+<!--                <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">-->
+<!--                    Your browser does not support the video tag.-->
+<!--                </video>-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--{% endif %}-->
 
 
-                {% if object.images.all %}
-    <div class="image-container mt-4"> <!-- Add 'mt-4' class for margin-top -->
-        <div class="row">
-            {% for image in object.images.all %}
-                <div class="col-md-4 mb-4">
-                    <img src="{{ image.image.url }}" alt="Post Image" class="img-fluid" />
-                </div>
-            {% endfor %}
-        </div>
+
+{% if object.videos.all %}
+    <div class="video-container">
+        {% for video_instance in object.videos.all %}
+            <div style="margin-bottom: 20px;">
+                <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">
+                    <source src="{{ video_instance.video.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        {% endfor %}
     </div>
 {% endif %}
 
+
+
+                {% if object.images.all %}
+                    <div class="image-container mt-4">
+                        <div class="row">
+                            {% for image in object.images.all %}
+                                <div class="col-md-4 mb-4">
+                                    <img src="{{ image.image.url }}" alt="Post Image" class="img-fluid" />
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
 
             </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-                const player = new Plyr('video');
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videos = document.querySelectorAll(".plyr");
+            videos.forEach(function (video) {
+                new Plyr(video);
             });
-    </script>
+        });
+</script>
 {% endblock %}

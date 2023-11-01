@@ -20,7 +20,7 @@ msgstr ""
 
 #: .\templates\blog\about_page.html:6
 msgid "О Нас"
-msgstr ""
+msgstr "About"
 
 #: .\templates\blog\about_page.html:8
 msgid ""

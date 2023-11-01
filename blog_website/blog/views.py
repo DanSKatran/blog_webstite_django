@@ -8,6 +8,11 @@ from django.views.generic import TemplateView, ListView, DetailView
 
 from blog.models import Post
 
+from django.http import HttpResponse, HttpResponseNotFound
+from django.utils.http import http_date
+from django.views import View
+from django.conf import settings
+import os
 
 class MainPageView(TemplateView):
     template_name = 'blog/home_page.html'
@@ -78,3 +83,22 @@ def page_not_found(request, exception):
 
 def server_error(request):
     return render(request, 'custom_errors/500.html', status=500)
+
+
+class RangeFileView(View):
+    def get(self, request, path):
+        file_path = os.path.join(settings.MEDIA_ROOT, path)
+
+        if not os.path.exists(file_path):
+            return HttpResponseNotFound("File not found")
+
+        response = HttpResponse()
+        response['Accept-Ranges'] = 'bytes'
+
+        try:
+            with open(file_path, 'rb') as file:
+                response.write(file.read())
+        except FileNotFoundError:
+            return HttpResponseNotFound("File not found")
+
+        return response

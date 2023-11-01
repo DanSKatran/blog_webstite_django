@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% load static %}
 {% load i18n %}
 
 {% block content %}
@@ -8,10 +10,12 @@
         {% trans "Если у вас есть вопросы, предложения или просто хочется связаться с нами, вы можете использовать следующие контактные данные:" %}
     </p>
     <p>
-        <strong>{% trans "Адрес:" %}</strong> [Ваш адрес]<br>
-        <strong>{% trans "Телефон:" %}</strong> [Ваш номер телефона]<br>
-        <strong>{% trans "Электронная почта:" %}</strong> [Ваш адрес электронной почты]
+        <strong>{% trans "Телеграм: " %}</strong><a href="https://t.me/Sergei_Katran" target="_blank">{% trans "https://t.me/Sergei_Katran" %}</a>
     </p>
+
+    <div class="mt-4">
+        <img src="{% static 'blog/cabbage_2.gif' %}" alt="Купусточка" class="img-fluid" width="300">
+    </div>
 
 </div>
 {% endblock %}

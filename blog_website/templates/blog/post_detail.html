@@ -16,23 +16,6 @@
                 <p class="card-text"><small class="text-muted">Published on {{ object.published_date }}</small></p>
 
 
-<!--                {% if object.videos.all %}-->
-<!--    <div class="video-container mt-4">-->
-<!--        {% for video_instance in object.videos.all %}-->
-<!--&lt;!&ndash;            <div class="mb-3 embed-responsive embed-responsive-16by9 video-placeholder plyr">&ndash;&gt;-->
-<!--&lt;!&ndash;                <video class="embed-responsive-item" controls preload="none" poster="{{ video_instance.poster_url }}" data-src="{{ video_instance.video.url }}">&ndash;&gt;-->
-<!--&lt;!&ndash;                    Your browser does not support the video tag.&ndash;&gt;-->
-<!--&lt;!&ndash;                </video>&ndash;&gt;-->
-<!--                <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">-->
-<!--                    Your browser does not support the video tag.-->
-<!--                </video>-->
-<!--&lt;!&ndash;            </div>&ndash;&gt;-->
-<!--        {% endfor %}-->
-<!--    </div>-->
-<!--{% endif %}-->
-
-
-
 {% if object.videos.all %}
     <div class="video-container">
         {% for video_instance in object.videos.all %}

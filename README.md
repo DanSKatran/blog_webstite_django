@@ -8,6 +8,8 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+cd blog_website/
+
 python manage.py runserver
 
 

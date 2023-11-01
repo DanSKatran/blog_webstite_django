@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-31 18:56+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\blog\about_page.html:6
+msgid "О Нас"
+msgstr ""
+
+#: .\templates\blog\about_page.html:8
+msgid ""
+"Мы - не просто группа людей, мы - сообщество единомышленников, которые нашли "
+"в творчестве и самовыражении свой путь к самовыражению и изменению мира. "
+"Наша история началась с общей страсти к искусству, и с тех пор мы стремимся "
+"расширить горизонты этой страсти и поделиться ею с другими."
+msgstr "We are not just a group of people; we are a community of like-minded individuals who have found their path to self-expression and changing the world through creativity. Our history began with a shared passion for art, and since then, we have been striving to broaden the horizons of this passion and share it with others."
+
+#: .\templates\blog\about_page.html:11
+msgid ""
+"Мы верим в силу совместной и органичной деятельности. У нас нет лидеров и "
+"последователей, у нас есть участники и соучастники. Создание среды, где "
+"каждый имеет голос, где идеи развиваются в диалоге, а решения принимаются на "
+"основе равноправия - это то, что нас объединяет. Мы ценим разнообразие и "
+"внимательно слушаем друг друга, исключая иерархию и принуждение из нашей "
+"повседневной жизни."
+msgstr "We believe in the power of collaborative and organic actions. We have no leaders and followers; we have participants and co-participants. Creating an environment where everyone has a voice, where ideas develop through dialogue, and decisions are made on the basis of equality is what unites us. We value diversity and attentively listen to one another, excluding hierarchy and coercion from our everyday lives."
+
+#: .\templates\blog\about_page.html:14
+msgid ""
+"Центр современного искусства, где мы находимся, для нас не является "
+"ограничивающей структурой, а скорее источником вдохновения. Мы поддерживаем "
+"искусство во всех его проявлениях и, возможно, иногда используем юмор и "
+"сатиру, чтобы выразить наши взгляды на систему искусства. Мы не боимся "
+"вызывать дискуссии и давать новый смысл искусству."
+msgstr "The modern art center where we are located is not seen as a limiting structure for us, but rather a source of inspiration. We support art in all its forms and, perhaps, sometimes use humor and satire to express our views on the art system. We are not afraid to provoke discussions and give new meaning to art."
+
+
+#: .\templates\blog\about_page.html:17
+msgid ""
+"Мы стремимся к влиянию и хотим, чтобы наше сообщество стало значимой силой в "
+"мире искусства. Наша миссия - вдохновлять и быть вдохновленными, вызывать "
+"вопросы и искать ответы, менять мир и самих себя."
+msgstr "We aim to make an impact and want our community to become a significant force in the world of art. Our mission is to inspire and be inspired, to raise questions and seek answers, to change the world and ourselves."
+
+#: .\templates\blog\contacts_page.html:6 .\templates\includes\header.html:40
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\templates\blog\contacts_page.html:8
+msgid ""
+"Если у вас есть вопросы, предложения или просто хочется связаться с нами, вы "
+"можете использовать следующие контактные данные:"
+msgstr "If you have questions, suggestions, or simply want to get in touch with us, you can use the following contact information:"
+
+#: .\templates\blog\contacts_page.html:11
+msgid "Адрес:"
+msgstr "Address:"
+
+#: .\templates\blog\contacts_page.html:12
+msgid "Телефон:"
+msgstr "Phone:"
+
+#: .\templates\blog\contacts_page.html:13
+msgid "Электронная почта:"
+msgstr "Email:"
+
+#: .\templates\blog\home_page.html:12
+msgid "Добро пожаловать в"
+msgstr "Welcome to"
+
+#: .\templates\blog\home_page.html:13
+msgid "Капустинский центр современного искусства"
+msgstr "Kapustin Center of Modern Art"
+
+#: .\templates\blog\home_page.html:22
+msgid ""
+"Мы - группа людей, которые разделяют общую страсть к творчеству и "
+"самовыражению."
+msgstr ""
+"We are a group of people who share a common passion for creativity and self-"
+"expression."
+
+#: .\templates\blog\home_page.html:23
+msgid ""
+"Мы верим в идею совместной и органичной деятельности. Создание среды, где "
+"каждый имеет голос и взаимодействие основано на равноправии, это то, что нас "
+"объединяет."
+msgstr ""
+"We believe in the idea of collaborative and organic activities. Creating an "
+"environment where everyone has a voice, and interaction is based on equality "
+"is what unites us."
+
+#: .\templates\blog\home_page.html:24
+msgid ""
+"Наше сообщество ценит независимость и непринужденное взаимодействие. Мы "
+"уделяем внимание разнообразию и диалогу, исключая иерархию и принуждение."
+msgstr ""
+"Our community values independence and unforced interaction. We focus on "
+"diversity and dialogue, excluding hierarchy and coercion."
+
+#: .\templates\blog\home_page.html:25
+msgid ""
+"Центр современного искусства, в котором мы находимся, не ограничивается "
+"формальными структурами. Мы поддерживаем искусство и, возможно, иногда "
+"используем юмор и сатиру, чтобы выразить наши взгляды на систему искусства."
+msgstr ""
+"The contemporary art center we are a part of does not adhere to formal "
+"structures. We support art and may occasionally use humor and satire to "
+"express our views on the art system."
+
+#: .\templates\blog\home_page.html:26
+msgid ""
+"Мы стремимся к влиянию и к тому, чтобы наше сообщество стало значимой силой "
+"в мире искусства."
+msgstr ""
+"We aspire to make an impact and to have our community become a significant "
+"force in the world of art."
+
+#: .\templates\blog\home_page.html:27
+msgid ""
+"Если вас привлекает идея творчества и хотите поделиться своим видением, не "
+"стесняйтесь связаться с нами. Ваше участие может оказаться ценным."
+msgstr ""
+"If you are drawn to the idea of creativity and wish to share your vision, "
+"feel free to get in touch with us. Your participation can be valuable."
+
+#: .\templates\blog\post_list.html:10 .\templates\includes\header.html:32
+msgid "Галерея"
+msgstr "Gallery"
+
+#: .\templates\blog\post_list.html:22
+msgid "Подробно"
+msgstr "Open"
+
+#: .\templates\includes\footer.html:6
+msgid "2023 Капустенский центр современного искусства"
+msgstr "Kapustin Center of Modern Art"
+
+#: .\templates\includes\header.html:28
+msgid "Главная"
+msgstr "Main"
+
+#: .\templates\includes\header.html:36
+msgid "О нас"
+msgstr "About us"

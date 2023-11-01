@@ -11,6 +11,9 @@
                 <p class="card-text">{{ object.text }}</p>
                 <p class="card-text"><small class="text-muted">Published on {{ object.published_date }}</small></p>
 
+                <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+                <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
+
                 {% if object.videos.all %}
                     {% for video_instance in object.videos.all %}
                         <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">

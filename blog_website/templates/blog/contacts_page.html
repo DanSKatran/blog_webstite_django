@@ -1,25 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
-    <div class="container mt-4">
-        <h1>Контакты</h1>
-        <p>Если у вас есть какие-либо вопросы, предложения или вы хотели бы связаться с нами, пожалуйста,
-            используйте следующие контактные данные:</p>
-        
-        <h2>Контактная информация</h2>
-        <ul>
-            <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
-            <li>Телефон: +7 123-456-7890</li>
-        </ul>
-        
-        <h2>Адрес</h2>
-        <p>123 Улица Художников, Город, Страна, Почтовый Индекс</p>
-        
-        <h2>Социальные сети</h2>
-        <ul>
-            <li>Facebook: <a href="https://www.facebook.com/YourArtBlog">YourArtBlog</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/yourartblog">YourArtBlog</a></li>
-            <li>Twitter: <a href="https://twitter.com/yourartblog">YourArtBlog</a></li>
-        </ul>
-    </div>
+<div class="contact-page">
+    <h1>{% trans "Контакты" %}</h1>
+    <p>
+        {% trans "Если у вас есть вопросы, предложения или просто хочется связаться с нами, вы можете использовать следующие контактные данные:" %}
+    </p>
+    <p>
+        <strong>{% trans "Адрес:" %}</strong> [Ваш адрес]<br>
+        <strong>{% trans "Телефон:" %}</strong> [Ваш номер телефона]<br>
+        <strong>{% trans "Электронная почта:" %}</strong> [Ваш адрес электронной почты]
+    </p>
+
+</div>
 {% endblock %}

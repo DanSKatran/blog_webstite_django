@@ -1,4 +1,8 @@
-<!-- Footer -->
-<footer class="bg-light p-3 text-center mb-6">
-    &copy; 2023 Капустинский центр современного искусства
+{% load static %}
+{% load i18n %}
+
+{% block footer %}
+<footer class="bg-light p-3 text-center">
+    &copy; {% trans "2023 Капустенский центр современного искусства" %}
 </footer>
+{% endblock %}

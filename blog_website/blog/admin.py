@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Post, PostImage, PostVideo
+from modeltranslation.admin import TranslationAdmin
 
 
 class PostImageInline(admin.StackedInline):
@@ -12,7 +13,7 @@ class PostVideoInline(admin.StackedInline):
     extra = 1
 
 
-class PostAdmin(admin.ModelAdmin):
+class PostAdmin(TranslationAdmin):
     list_display = ('title', 'author', 'published_date', 'is_published', 'created_date')
     list_filter = ('published_date', 'is_published', 'created_date')
     search_fields = ('title', 'created_date')

@@ -16,19 +16,18 @@
                 <p class="card-text"><small class="text-muted">Published on {{ object.published_date }}</small></p>
 
 
-{% if object.videos.all %}
-    <div class="video-container">
-        {% for video_instance in object.videos.all %}
-            <div style="margin-bottom: 20px;">
-                <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">
-                    <source src="{{ video_instance.video.url }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        {% endfor %}
-    </div>
-{% endif %}
-
+                {% if object.videos.all %}
+                    <div class="video-container">
+                        {% for video_instance in object.videos.all %}
+                            <div style="margin-bottom: 20px;">
+                                <video controls class="plyr" data-plyr-provider="html5" data-plyr-embed-id="{{ video_instance.video.url }}">
+                                    <source src="{{ video_instance.video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
 
 
                 {% if object.images.all %}
@@ -36,7 +35,7 @@
                         <div class="row">
                             {% for image in object.images.all %}
                                 <div class="col-md-4 mb-4">
-                                    <img src="{{ image.image.url }}" alt="Post Image" class="img-fluid" />
+                                    <img src="{{ image.image.url }}" alt="Image not loaded" class="img-fluid" />
                                 </div>
                             {% endfor %}
                         </div>
@@ -54,5 +53,6 @@
                 new Plyr(video);
             });
         });
+
 </script>
 {% endblock %}

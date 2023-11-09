@@ -95,13 +95,9 @@ msgstr "Telegram: "
 msgid "https://t.me/Sergei_Katran"
 msgstr ""
 
-#: .\templates\blog\home_page.html:12
-msgid "Добро пожаловать в"
-msgstr "Welcome to"
-
 #: .\templates\blog\home_page.html:13
 msgid "Капустинский центр современного искусства"
-msgstr "Kapustin Center of Modern Art"
+msgstr "Kapustino Center of Modern Art"
 
 #: .\templates\blog\home_page.html:22
 msgid ""
@@ -165,7 +161,7 @@ msgstr "Open"
 
 #: .\templates\includes\footer.html:6
 msgid "2023 Капустенский центр современного искусства"
-msgstr "Kapustin Center of Modern Art"
+msgstr "Kapustino Center of Modern Art"
 
 #: .\templates\includes\header.html:30
 msgid "Главная"

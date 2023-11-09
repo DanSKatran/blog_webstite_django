@@ -16,11 +16,15 @@
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">{{ post.text|truncatechars:100 }}</p>
+                        <p class="card-text mb-12">{{ post.text|truncatechars:200 }}</p>
                     </div>
+                    <br>
+
+                    <div class="mb-6"><footer class="blockquote-footer">{{ post.published_date }}</footer></div>
                     <div class="card-footer">
                         <a href="{% url 'blog:post_detail' post.pk %}" class="btn custom-button">{% trans "Подробно" %}</a>
                     </div>
+
                 </div>
             </div>
         {% endfor %}

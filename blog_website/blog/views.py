@@ -14,6 +14,7 @@ from django.views import View
 from django.conf import settings
 import os
 
+
 class MainPageView(TemplateView):
     template_name = 'blog/home_page.html'
 

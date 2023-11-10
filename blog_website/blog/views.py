@@ -13,6 +13,7 @@ from django.utils.http import http_date
 from django.views import View
 from django.conf import settings
 import os
+from urllib.parse import unquote
 
 
 class MainPageView(TemplateView):
@@ -107,9 +108,12 @@ class RangeFileView(View):
         return response
 
 
-# def view_image(request, url):
-#     # url = request.GET.get('url', '')
-#     print(url)
-#     image_path = url
-#     with open(image_path, 'rb') as image_file:
-#         return FileResponse(image_file, content_type='image/png')
+def view_image(request, url):
+    cleaned_url = os.path.normpath(url.lstrip('/').replace('media/', ''))
+    image_path = os.path.join(settings.MEDIA_ROOT, cleaned_url)
+
+    if os.path.exists(image_path):
+        return FileResponse(open(image_path, 'rb'), content_type='image/png')
+    else:
+        print(f'The file {image_path} does not exist.')
+        raise Http404('Image not found')

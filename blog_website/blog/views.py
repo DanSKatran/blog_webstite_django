@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, FileResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -103,3 +103,11 @@ class RangeFileView(View):
             return HttpResponseNotFound("File not found")
 
         return response
+
+
+# def view_image(request, url):
+#     # url = request.GET.get('url', '')
+#     print(url)
+#     image_path = url
+#     with open(image_path, 'rb') as image_file:
+#         return FileResponse(image_file, content_type='image/png')

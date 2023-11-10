@@ -35,7 +35,9 @@
                         <div class="row">
                             {% for image in object.images.all %}
                                 <div class="col-md-4 mb-4">
+                                        <a href="{{image.image.url}}" target="_blank">
                                     <img src="{{ image.image.url }}" alt="Image not loaded" class="img-fluid" />
+                                    </a>
                                 </div>
                             {% endfor %}
                         </div>

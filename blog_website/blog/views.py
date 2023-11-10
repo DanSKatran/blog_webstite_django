@@ -1,5 +1,5 @@
 from django.http import Http404, FileResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 from django.utils import timezone
@@ -63,18 +63,20 @@ class PostDetailView(DetailView):
     model = Post
 
     def dispatch(self, request, *args, **kwargs):
-        if Post.objects.filter(
+        post = get_object_or_404(
+            Post.objects.select_related('author'),
             pk=self.kwargs['pk'],
             is_published=True,
             published_date__lte=timezone.now(),
-        ).exists():
-            return super().dispatch(request, *args, **kwargs)
-        else:
-            return Http404()
+        )
+        self.object = post
+        return super().dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['view_name'] = self.request.resolver_match.view_name
+        context['images'] = self.object.images.all().prefetch_related('image')
+        context['videos'] = self.object.videos.all().prefetch_related('video')
         return context
 
 

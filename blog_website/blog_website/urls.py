@@ -13,8 +13,8 @@ handler500 = 'blog.views.server_error'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     path('i18n/', include('django.conf.urls.i18n')),
+    path('', include('blog.urls', namespace='blog')),
     re_path(r'^media/(?P<path>.*)$', RangeFileView.as_view(), name='media'),
 ]
 

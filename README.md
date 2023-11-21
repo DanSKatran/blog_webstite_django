@@ -23,4 +23,5 @@ Built With:
 
 to add new language:
 django-admin makemessages -l en -e html
+
 django-admin compilemessages

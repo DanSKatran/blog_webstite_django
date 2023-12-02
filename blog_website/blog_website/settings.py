@@ -17,10 +17,13 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
+    'kapustino.space',
+    '31.31.196.85',
 ]
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    '127.0.0.1',
+    '31.31.196.85',
 ]
 
 # Application definition

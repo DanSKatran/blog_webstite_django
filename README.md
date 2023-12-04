@@ -1,6 +1,6 @@
 # django_sprint4
 
-cd blog_website/
+cd blog_website_django/
 
 python -m venv venv
 

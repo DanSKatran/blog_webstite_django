@@ -15,6 +15,7 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     published_date = models.DateField(verbose_name='Дата публикации')
     is_published = models.BooleanField(default=False, verbose_name='Опубликовано')
+    video_link = models.URLField(blank=True, null=True, verbose_name='Ссылка на видео')
 
     def __str__(self):
         return self.title

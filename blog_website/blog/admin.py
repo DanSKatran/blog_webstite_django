@@ -23,7 +23,7 @@ class PostAdmin(TranslationAdmin):
 
     fieldsets = [
         ('Основная информация', {
-            'fields': ('title', 'text', 'author', 'published_date', 'is_published')
+            'fields': ('title', 'text', 'author', 'published_date', 'is_published', 'video_link')
         }),
     ]
 

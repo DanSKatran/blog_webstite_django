@@ -29,6 +29,9 @@
                     </div>
                 {% endif %}
 
+                {% if post.video_link %}
+                    <p>YouTube: <a href="{{ post.video_link }}">{{ post.video_link }}</a></p>
+                {% endif %}
 
                 {% if object.images.all %}
                     <div class="image-container mt-4">

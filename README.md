@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 cd blog_website/
 
-python manage.py runserver
+python manage.py runserver ip:port
 
 
 Usage:
@@ -25,3 +25,9 @@ to add new language:
 django-admin makemessages -l en -e html
 
 django-admin compilemessages
+
+
+Useful commands for setting up the project on server:
+sudo systemctl restart gunicorn
+sudo systemctl restart nginx
+sudo systemctl reload nginx

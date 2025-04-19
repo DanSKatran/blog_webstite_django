@@ -142,7 +142,7 @@ msgid "Подробно"
 msgstr "Open"
 
 #: .\templates\includes\footer.html:6
-msgid "2023 Капустенский центр современного искусства"
+msgid "2025 Капустинский центр современного искусства"
 msgstr "Kapustino Center of Contemporary Art"
 
 #: .\templates\includes\header.html:30
